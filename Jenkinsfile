@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..';
-                cat Jenkinsfile | grep 'Build'
+                echo 'Building..'
+                sh "cat Jenkinsfile | grep 'Build'"
             }
         }
         stage('Test') {
